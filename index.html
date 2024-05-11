@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+    <h1>Array Operations</h1>
+    <p>This is a demonstration of various array operations in JavaScript.</p>
+    <h2>Array Basics</h2>
+    <ul>
+        <li><strong>Array:</strong> A collection of elements with different data types (except in C and C++).</li>
+        <li><strong>Push:</strong> Insert an element at the end of the array.</li>
+        <li><strong>Pop:</strong> Remove the last element from the array.</li>
+        <li><strong>Shift:</strong> Remove the first element from the array.</li>
+        <li><strong>Unshift:</strong> Insert an element at the beginning of the array.</li>
+    </ul>
+    <h2>More Methods</h2>
+    <ul>
+        <li><strong>indexOf:</strong> Find the index of an element.</li>
+        <li><strong>splice:</strong> Add or remove elements from an array at a specific index.</li>
+        <li><strong>includes:</strong> Check if an element is present in the array.</li>
+        <li><strong>join:</strong> Convert the array to a string with elements joined by a specified separator.</li>
+        <li><strong>Array.isArray:</strong> Check if a variable is an array.</li>
+        <li><strong>reverse:</strong> Reverse the order of elements in the array.</li>
+        <li><strong>sort:</strong> Sort the elements of the array.</li>
+    </ul>
+
+    <script>
+        const fruits = ["Apple", "Banana", "Carrot"];
+        console.log('Original Array:', fruits);
+
+        fruits.push("Mango");
+        console.log('After push:', fruits);
+        fruits.pop();
+        console.log('After pop:', fruits);
+
+        fruits.unshift("Strawberry");
+        console.log('After unshift:', fruits);
+        fruits.shift();
+        console.log('After shift:', fruits);
+
+        fruits.splice(2, 0, "Kiwi", "Jamun");
+        console.log('After splice (add):', fruits);
+
+        fruits.splice(2, 2, "Pineapple", "Orange");
+        console.log('After splice (replace):', fruits);
+        console.log('Includes "Banana":', fruits.includes("Banana"));
+        console.log('Includes "Grapes":', fruits.includes("Grapes"));
+        console.log('Index of "Carrot":', fruits.indexOf("Carrot"));
+
+        console.log('Joined:', fruits.join(", "));
+        console.log('Is fruits an array?', Array.isArray(fruits));
+
+        console.log('Reversed:', fruits.slice().reverse());
+        console.log('Sorted:', fruits.slice().sort());
+        console.log('Sorted (reverse):', fruits.slice().sort().reverse());
+    </script>
+</body>
+</html>
